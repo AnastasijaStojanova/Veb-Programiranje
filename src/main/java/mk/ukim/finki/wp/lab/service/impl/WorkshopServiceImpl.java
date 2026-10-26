@@ -1,0 +1,22 @@
+package mk.ukim.finki.wp.lab.service.impl;
+import mk.ukim.finki.wp.lab.repository.WorkshopRepository;
+import mk.ukim.finki.wp.lab.model.Workshop;
+import mk.ukim.finki.wp.lab.service.WorkshopService;
+
+import java.util.List;
+import java.util.Scanner;
+
+public class WorkshopServiceImpl implements WorkshopService {
+    private final WorkshopRepository workshopRepository;
+
+    public WorkshopServiceImpl(WorkshopRepository workshopRepository) {
+        this.workshopRepository = workshopRepository;
+    }
+public List<Workshop> listAll() {
+    return workshopRepository.findAll();
+}
+public List<Workshop> search(String text, Double maxPrice) {
+    return workshopRepository.search(text, maxPrice);
+}
+}
+
