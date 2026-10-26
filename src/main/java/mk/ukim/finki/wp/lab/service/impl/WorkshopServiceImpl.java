@@ -2,10 +2,11 @@ package mk.ukim.finki.wp.lab.service.impl;
 import mk.ukim.finki.wp.lab.repository.WorkshopRepository;
 import mk.ukim.finki.wp.lab.model.Workshop;
 import mk.ukim.finki.wp.lab.service.WorkshopService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Scanner;
-
+@Service
 public class WorkshopServiceImpl implements WorkshopService {
     private final WorkshopRepository workshopRepository;
 
